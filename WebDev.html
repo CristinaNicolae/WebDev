@@ -1,0 +1,50 @@
+<html>
+<script type="text/javascript">
+
+// Functii
+function add_one(x)
+{
+    return x+1;
+}
+
+function multiply_by_five(x)
+{
+    return x+5;
+}
+
+function substract_three(x)
+{
+    return x-3;
+}
+
+function add_two(x)
+{
+	return x+2;
+}
+
+function multiply_by_three(x)
+{
+    return x*3;
+}
+
+// Functia care rezolva cerinta
+function rezolvare()
+{
+	var x = arguments[0];
+    var solutie = new Array();
+	
+	for (var i = 1; i < arguments.length; i++)
+	{
+     solutie[i-1] = arguments[i](x);
+    }
+    
+	document.write('[' + solutie.toString()+ ']');
+}
+
+//Exemple
+rezolvare(2, add_one); 
+rezolvare(3, add_two, multiply_by_three); 
+rezolvare(8, add_one, multiply_by_five, substract_three, add_two, multiply_by_three); 
+
+</script>
+</html>
